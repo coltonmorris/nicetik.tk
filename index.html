@@ -24,9 +24,14 @@
   </head>
   <body>
     <h1>Nice tik tok!</h1>
+      <audio id="audio" src="nicetiktok.mp3" type="audio/mpeg" preload="auto" autoplay>
+        
       <script type="text/javascript">
       // autoplay is disabled on mobile web
       document.addEventListener('touchend', function handleTouch () {
+        document.getElementById('audio').play();
+
+        
         var synth = window.speechSynthesis;
         var voice = synth.getVoices()[57]; // other favorites are 7, 7, 48
         var utterThis = new SpeechSynthesisUtterance("nice tik tok");
